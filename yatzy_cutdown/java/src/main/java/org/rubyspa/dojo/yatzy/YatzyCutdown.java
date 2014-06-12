@@ -81,10 +81,11 @@ public class YatzyCutdown {
             case FOUR_OF_A_KIND:
                 return 4 * bucketList.stream().filter(b -> b.count == 4).mapToInt(b -> b.roll).sum();
             case FULL_HOUSE:
-            case YATZY:
             case SMALL_STRAIGHT:
             case LARGE_STRAIGHT:
                 return rolls.stream().reduce(0, Integer::sum);
+            case YATZY:
+                return 50;
             default:
                 throw new IllegalArgumentException("Illegal category: " + category.name());
         }

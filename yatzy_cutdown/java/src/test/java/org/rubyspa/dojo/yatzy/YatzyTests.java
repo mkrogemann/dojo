@@ -106,7 +106,7 @@ public class YatzyTests {
     @Test
     public void score_yatzy() throws Exception {
         final YatzyCutdown yatzyCutdown = new YatzyCutdown();
-        assertEquals(Integer.valueOf(25), yatzyCutdown.score(Arrays.asList(5, 5, 5, 5, 5), YatzyCutdown.YatzyCategory.YATZY));
+        assertEquals(Integer.valueOf(50), yatzyCutdown.score(Arrays.asList(5, 5, 5, 5, 5), YatzyCutdown.YatzyCategory.YATZY));
         assertEquals(Integer.valueOf(0), yatzyCutdown.score(Arrays.asList(1, 2, 3, 4, 5), YatzyCutdown.YatzyCategory.YATZY));
     }
 
